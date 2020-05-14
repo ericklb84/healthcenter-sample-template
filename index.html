@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-responsivo">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+                    <input type="checkbox" />
+
+                    <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+                    <ul id="menu">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>Sobre nós</li>
+                        </a>
+                        <a href="#">
+                            <li>Agendamento</li>
+                        </a>
+                        <a href="#">
+                            <li>Contato</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </nav>
+            <img src="./mideas/logo.svg" height="60px" alt="">
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+
+
+
+
+
+
+
+
+            <div class="left">
+                <span class="logo">
+                <img src="./mideas/logo.svg" height="70vh" alt="">
+            </span>
+                <span class="nav-content">Home</span>
+                <span class="nav-content">Contato</span>
+                <span class="nav-content">Agendamento</span>
+                <span class="nav-content">Sobre-nós</span>
+
+            </div>
+        </nav>
+    </header>
+    <section class="primeira">
+
+        <div class="card">
+            <div class="img-card">
+                <img src="./mideas/undraw_pilates_gpdb.svg" width="90%" alt="PILATES">
+            </div>
+            <div class="describe-card">
+                <span>Pilates</span>
+                <button class="btn btn-card" type="button" data-toggle="modal" data-target="#exampleModal">
+                        <span class="btn-span">AGENDE UM HORÁRIO</span>
+                    </button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-card">
+                <img src="./mideas/undraw_personal_trainer_ote3.svg" width="90%" alt="PILATES">
+            </div>
+            <div class="describe-card">
+                <span>Academia</span>
+                <button class="btn btn-card" type="button" data-toggle="modal" data-target="#exampleModal">
+                        <span class="btn-span">AGENDE UM HORÁRIO</span>
+                    </button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-card">
+                <img src="./mideas/undraw_diet_ghvw.svg" width="90%" alt="PILATES">
+            </div>
+            <div class="describe-card">
+                <span>Nutricionista</span>
+                <button class="btn btn-card" type="button" data-toggle="modal" data-target="#exampleModal">
+                        <span class="btn-span">AGENDE UM HORÁRIO</span>
+                    </button>
+            </div>
+        </div>
+    </section>
+    <section class="segunda">
+        <h1 class="titulo">Sobre nós</h1>
+        <div class="container">
+            <div class="paragrafo">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sequi voluptatem magni incidunt neque sapiente necessitatibus debitis impedit quas possimus aut quod omnis vel sed dolor nulla, aperiam modi odit.Placeat voluptates itaque
+                    a repellat cumque odio totam animi ad consequuntur? Sed esse dignissimos doloribus pariatur quod soluta aliquid vel, est exercitationem voluptates numquam tempore rerum nam laudantium eveniet molestias!</p>
+            </div>
+            <div class="right-ilustration">
+                <img src="./mideas/undraw_superhero_kguv.svg" width="300px" alt="">
+            </div>
+        </div>
+
+    </section>
+    <section class="terceira">
+        <h1 class="titulo white">Nossa missão</h1>
+        <div class="container">
+            <div class="right-ilustration">
+                <img src="./mideas/undraw_superhero_kguv.svg" width="300px" alt="">
+            </div>
+            <div class="paragrafo">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sequi voluptatem magni incidunt neque sapiente necessitatibus debitis impedit quas possimus aut quod omnis vel sed dolor nulla, aperiam modi odit.Placeat voluptates itaque
+                    a repellat cumque odio totam animi ad consequuntur? Sed esse dignissimos doloribus pariatur quod soluta aliquid vel, est exercitationem voluptates numquam tempore rerum nam laudantium eveniet molestias!</p>
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+        <div class="logo-footer">
+            <img src="./mideas/logo.svg" height="100px" alt="">
+        </div>
+        <div class="mapa-do-site">
+            <ul class="lista-footer">
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="">Contato</a>
+                </li>
+                <li>
+                    <a href="">Agendamento</a>
+                </li>
+                <li>
+                    <a href="">Sobre Nós</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul class="lista-footer">
+                <li><a href="">(47) 9 9999-9999</a></li>
+                <li><a href="">(47) 3333-3333</a></li>
+                <li>
+                    <a href="">nome@dominio.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="endereco">
+            <ul class="lista-footer">
+                <li><a href="">R. Uma Rua, 00, Bairro, Cidade - SC</a></li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d65246516.861001804!2d19.350627541690674!3d3.51060545568079!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1589491536116!5m2!1spt-BR!2sbr" width="100%" height="125" frameborder="0"
+                        style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agende um horário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <img src="./mideas/communications.svg" height="30px" alt="">
+                        <a href="callto:4733333333">(47)3333-3333</a>
+                    </div>
+                    <div>
+                        <img src="./mideas/brands-and-logotypes.svg" height="30px" alt="">
+                        <a href="#">Envie um Whatsapp</a>
+                    </div>
+                    <table border="1">
+                        <tr>
+                            <th colspan="2">Horário de atendimento</th>
+                        </tr>
+                        <tr>
+                            <th>Dias</th>
+                            <th>Horário</th>
+                        </tr>
+                        <tr>
+                            <td>Segunda à sexta</td>
+                            <td>9:00 - 22:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sábados</td>
+                            <td>9:00 - 12:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domigos e feriados</td>
+                            <td class="text-red">Fechado</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal-->
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>

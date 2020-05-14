@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.btn {
+    background-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+}
+
+.barra-navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(227, 229, 233);
+    justify-content: space-evenly;
+}
+
+.nav-content {
+    color: #666;
+    margin-left: 15px;
+}
+
+.left {
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.primeira {
+    background-image: url('./mideas/bg/bg1.svg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+@media screen and (max-width:700px) {
+    .primeira {
+        flex-direction: column;
+        height: auto;
+    }
+    .card {
+        min-width: 90%;
+        min-height: 60vh;
+        margin: 20px 0;
+    }
+    .right-ilustration {
+        display: none;
+    }
+    .paragrafo {
+        min-width: 95%;
+    }
+    .logo-footer {
+        display: none;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
+
+.card {
+    width: 20%;
+    height: 30vw;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: -5px 4px 24px -13px rgba(102, 102, 102, 0.71);
+}
+
+.card:hover {
+    box-shadow: -5px 4px 121px -13px rgba(102, 102, 102, 0.71);
+    transform: scale(1.1);
+}
+
+.img-card {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.describe-card {
+    display: flex;
+    height: 40%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.describe-card .btn-card {
+    color: coral;
+}
+
+.btn-card {
+    padding: 10px 20px;
+    border: 1px solid coral;
+    border-radius: 25px;
+}
+
+.btn-card:hover {
+    background-color: coral;
+    color: #fff;
+}
+
+.segunda {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 0;
+    background-image: linear-gradient(to top, #46fdff, #fff, #fff);
+}
+
+.titulo {
+    text-align: center;
+    color: #46fdff;
+    text-transform: uppercase;
+}
+
+.paragrafo {
+    color: rgb(0, 0, 0);
+    width: 35%;
+    height: 30vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.right-ilustration {
+    -webkit-transform: rotateZ(-30deg);
+}
+
+.terceira {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0;
+    background-image: linear-gradient(to bottom, #46fdff, #fff, #fff);
+}
+
+.white {
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #46fdff;
+    width: 100%;
+    margin-top: 20vh;
+}
+
+.lista-footer {
+    list-style: none;
+}
+
+
+/*Modal*/
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.modal.modal-static .modal-dialog {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+    display: -ms-flexbox;
+    display: flex;
+    max-height: calc(100% - 1rem);
+}
+
+.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-dialog-centered::before {
+    display: block;
+    height: calc(100vh - 1rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    content: "";
+}
+
+.modal-dialog-centered.modal-dialog-scrollable {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    max-height: none;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable::before {
+    content: none;
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.modal-footer>* {
+    margin: 0.25rem;
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    .modal-dialog-scrollable {
+        max-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-scrollable .modal-content {
+        max-height: calc(100vh - 3.5rem);
+    }
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-centered::before {
+        height: calc(100vh - 3.5rem);
+        height: -webkit-min-content;
+        height: -moz-min-content;
+        height: min-content;
+    }
+    .modal-sm {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: tomato;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+
+/*
+  * Just a quick hamburger
+  */
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+/* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+
+/*
+  * But let's hide the middle one.
+  */
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+/*
+  * Ohyeah and the last one should go the other direction
+  */
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #46fdff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+
+/*
+  * And let's slide it in from the left
+  */
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+@media screen and (min-width:700px) {
+    .menu-responsivo {
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .menu-responsivo {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .barra-navegacao {
+        display: none;
+    }
+    footer iframe {
+        display: none;
+    }
+}
+
+.menu-responsivo {
+    width: 100%;
+    height: 10vh;
+    background-color: #46fdff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuToggle {
+    margin-top: -60px;
+}
+
+tr {
+    text-align: center;
+}
+
+.text-red {
+    color: #f00;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+}
